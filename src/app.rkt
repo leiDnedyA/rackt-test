@@ -13,8 +13,8 @@
 ;         (<el gif-controller #:props ($/obj [src "./res/cat_dancing.webm"]))))
 
 (define (app props ..)
-    (sexp->react ("div" ([className "App"])
-                  (header)
+    (sexp->react (div ([className "App"])
+                  (my-header)
                   (gif-controller ([src "./res/cat_dancing.webm"])))))
 
 (define test-element (sexp->react (app)))

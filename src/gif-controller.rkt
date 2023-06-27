@@ -14,17 +14,17 @@
         ($/:= #js.video-ref.current.loop #true)
         (lambda (_) 0) ; react yells at you if useEffect returns anything but a function
         ))
-    (sexp->react ("div" ([className "gifController"])
-                        ("video" 
+    (sexp->react (div ([className "gifController"])
+                        (video 
                             ([src ($ props 'src)]
                             [ref video-ref]
                             [className "mainVideo"]
                             [muted "muted"]))
-                        ("button"   
+                        (button   
                                 ([onClick (lambda (_) (change-video-speed #js.video-ref.current -0.25))]
                                 [className "minusButton"])
                                 "-")
-                        ("button" 
+                        (button 
                                 ([onClick (lambda (_) (change-video-speed #js.video-ref.current .25))]
                                 [className "plusButton"])
                                 "+"))))
