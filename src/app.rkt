@@ -2,14 +2,15 @@
 
 (require rackt
          "./header.rkt"
-         "./gif-controller.rkt")
+         "./gif-controller.rkt"
+         )
 
 (define console-log #js*.console.log)
 
 ; (define (app props ..)
 ;     (<el "div"
 ;         #:props ($/obj [className "App"])
-;         (<el header)
+;         (<el my-header)
 ;         (<el gif-controller #:props ($/obj [src "./res/cat_dancing.webm"]))))
 
 (define (app props ..)

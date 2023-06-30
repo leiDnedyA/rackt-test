@@ -27,6 +27,7 @@
                         (button 
                                 ([onClick (lambda (_) (change-video-speed #js.video-ref.current .25))]
                                 [className "plusButton"])
-                                "+"))))
+                                "+")
+                                )))
 
 (provide gif-controller)
